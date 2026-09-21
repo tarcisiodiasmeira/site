@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="apple.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preços de Manutenção</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <section class="precos">
+
+        <h1>📱 Modelos</h1>
+
+        <p>Selecione o modelo do seu celular</p>
+
+        <div class="celulares">
+
+            <!-- IPHONE X -->
+            <div class="celular-card"
+                onclick="abrirModelos('iPhone X')">
+
+                <div class="icone">
+                    <img src="img/x.jpg" alt="iPhone X" width="100">
+                </div>
+
+                <h2>iPhone X</h2>
+
+                <span>Ver modelos</span>
+            </div>
+
+
+            <!-- IPHONE XS -->
+            <div class="celular-card"
+                onclick="abrirModelos('iPhone XS')">
+
+                <div class="icone">
+                    <img src="img/xs.webp" alt="iPhone XS" width="90">
+                </div>
+
+                <h2>iPhone XS</h2>
+
+                <span>Ver modelos</span>
+            </div>
+
+
+            <!-- IPHONE XR -->
+            <div class="celular-card"
+                onclick="abrirModelos('iPhone XR')">
+
+                <div class="icone">
+                    <img src="img/xr.webp" alt="iPhone XR" width="90">
+                </div>
+
+                <h2>iPhone XR</h2>
+
+                <span>Ver modelos</span>
+            </div>
+
+
+            <!-- IPHONE 11 -->
+            <div class="celular-card"
+                onclick="abrirModelos('iPhone 11')">
+
+                <div class="icone">
+                    <img src="img/11.jpg" alt="iPhone 11" width="70">
+                </div>
+
+                <h2>iPhone 11</h2>
+
+                <span>Ver modelos</span>
+            </div>
+
+
+            <!-- IPHONE 12 -->
+            <div class="celular-card"
+                onclick="abrirModelos('iPhone 12')">
+
+                <div class="icone">
+                    <img src="img/12.png" alt="iPhone 12" width="70">
+                </div>
+
+                <h2>iPhone 12</h2>
+
+                <span>Ver modelos</span>
+            </div>
+
+
+            <!-- IPHONE 13 -->
+            <div class="celular-card"
+                onclick="abrirModelos('iPhone 13')">
+
+                <div class="icone">
+                    <img src="img/13.png" alt="iPhone 13" width="70">
+                </div>
+
+                <h2>iPhone 13</h2>
+
+                <span>Ver modelos</span>
+            </div>
+
+
+            <!-- IPHONE 14 -->
+            <div class="celular-card"
+                onclick="abrirModelos('iPhone 14')">
+
+                <div class="icone">
+                    <img src="img/14.png" alt="iPhone 14" width="70">
+                </div>
+
+                <h2>iPhone 14</h2>
+
+                <span>Ver modelos</span>
+            </div>
+
+
+            <!-- IPHONE 15 -->
+            <div class="celular-card"
+                onclick="abrirModelos('iPhone 15')">
+
+                <div class="icone">
+                    <img src="img/15.jpg" alt="iPhone 15" width="70">
+                </div>
+
+                <h2>iPhone 15</h2>
+
+                <span>Ver modelos</span>
+            </div>
+
+
+            <!-- IPHONE 16 -->
+            <div class="celular-card"
+                onclick="abrirModelos('iPhone 16')">
+
+                <div class="icone">
+                    <img src="img/16.png" alt="iPhone 16" width="70">
+                </div>
+
+                <h2>iPhone 16</h2>
+
+                <span>Ver modelos</span>
+            </div>
+
+
+            <!-- IPHONE 17 -->
+            <div class="celular-card"
+                onclick="abrirModelos('iPhone 17')">
+
+                <div class="icone">
+                    <img src="img/17.jpg" alt="iPhone 17" width="70">
+                </div>
+
+                <h2>iPhone 17</h2>
+
+                <span>Ver modelos</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         ESCOLHA DO MODELO
+    ================================== -->
+
+    <div class="pagina-preco" id="paginaModelos">
+
+        <div class="preco-card">
+
+            <button class="fechar" onclick="fecharModelos()">
+                ×
+            </button>
+
+            <div class="icone-grande">
+                📱
+            </div>
+
+            <h2 id="tituloModelo">
+                iPhone 13
+            </h2>
+
+            <p class="tipo-servico">
+                Escolha a versão
+            </p>
+
+            <div class="opcoes-modelos" id="opcoesModelos">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         PÁGINA DO PREÇO
+    ================================== -->
+
+    <div class="pagina-preco" id="paginaPreco">
+
+        <div class="preco-card">
+
+            <button class="fechar" onclick="fecharPreco()">
+                ×
+            </button>
+
+            <div class="icone-grande">
+                📱
+            </div>
+
+            <h2 id="nomeCelular">
+                iPhone 13
+            </h2>
+
+            <p class="tipo-servico">
+              Descreva seu problema
+            </p>
+
+            <textarea id="problemaCelular" placeholder="Digite aqui o problema do seu celular...">
+            
+            </textarea>
+
+            <a
+                class="whatsapp"
+                id="botaoWhatsapp"
+                href="5577998384275"
+                target="_blank"
+            >
+                💬 Solicitar orçamento
+            </a>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+    /*
+    ==========================================
+    MODELOS DISPONÍVEIS
+    ==========================================
+    */
+const modelos = {
+
+    "iPhone X": [
+        "iPhone X"
+    ],
+
+    "iPhone XS": [
+        "iPhone XS",
+        "iPhone XS Max"
+    ],
+
+    "iPhone XR": [
+        "iPhone XR"
+    ],
+
+    "iPhone 11": [
+        "iPhone 11",
+        "iPhone 11 Pro",
+        "iPhone 11 Pro Max"
+    ],
+
+    "iPhone 12": [
+        "iPhone 12",
+        "iPhone 12 mini",
+        "iPhone 12 Pro",
+        "iPhone 12 Pro Max"
+    ],
+
+    "iPhone 13": [
+        "iPhone 13",
+        "iPhone 13 mini",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max"
+    ],
+
+    "iPhone 14": [
+        "iPhone 14",
+        "iPhone 14 Plus",
+        "iPhone 14 Pro",
+        "iPhone 14 Pro Max"
+    ],
+
+    "iPhone 15": [
+        "iPhone 15",
+        "iPhone 15 Plus",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max"
+    ],
+
+    "iPhone 16": [
+        "iPhone 16",
+        "iPhone 16 Plus",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max"
+    ],
+
+    "iPhone 17": [
+        "iPhone 17e",
+        "iPhone 17",
+        "iPhone 17 Air",
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max"
+    ]
+
+};
+    /*
+    ==========================================
+    ABRIR LISTA DE MODELOS
+    ==========================================
+    */
+function abrirModelos(modelo) {
+
+    document.getElementById("tituloModelo").textContent = modelo;
+
+    const container = document.getElementById("opcoesModelos");
+
+    container.innerHTML = "";
+
+    modelos[modelo].forEach(function(nome) {
+
+        const botao = document.createElement("button");
+
+        botao.className = "botao-modelo";
+
+        botao.innerHTML = `
+            <strong>${nome}</strong>
+            <span>Solicitar orçamento</span>
+        `;
+
+        botao.onclick = function() {
+
+            abrirPreco(nome);
+
+        };
+
+        container.appendChild(botao);
+
+    });
+
+    document
+        .getElementById("paginaModelos")
+        .classList.add("aberta");
+}
+    /*
+    ==========================================
+    FECHAR MODELOS
+    ==========================================
+    */
+
+    function fecharModelos() {
+
+        document.getElementById(   "paginaModelos"     ).classList.remove("aberta");
+
+    }
+
+
+    /*
+    ==========================================
+    ABRIR PREÇO
+    ==========================================
+    */
+function abrirPreco(nome) {
+
+    document.getElementById("nomeCelular").textContent = nome;
+
+    // Limpa o campo quando abrir
+    document.getElementById("problemaCelular").value = "";
+
+    const botaoWhatsapp = document.getElementById("botaoWhatsapp");
+
+    botaoWhatsapp.onclick = function(event) {
+
+        event.preventDefault();
+
+        const problema =
+            document.getElementById("problemaCelular").value.trim();
+
+        // Verifica se o cliente escreveu alguma coisa
+        if (problema === "") {
+
+            alert("Por favor, descreva o problema do celular.");
+
+            return;
+
+        }
+
+        const mensagem =
+            "Olá! Gostaria de solicitar um orçamento para o " +
+            nome +
+            ".\n\n" +
+            "Problema apresentado: " +
+            problema;
+
+        const numero = "5577998384275";
+
+        const link =
+            "https://wa.me/" +
+            numero +
+            "?text=" +
+            encodeURIComponent(mensagem);
+
+        window.open(link, "_blank");
+
+    };
+
+    fecharModelos();
+
+    document
+        .getElementById("paginaPreco")
+        .classList.add("aberta");
+}
+
+    /*
+    ==========================================
+    FECHAR PREÇO
+    ==========================================
+    */
+
+    function fecharPreco() {
+
+        document.getElementById(
+            "paginaPreco"
+        ).classList.remove("aberta");
+
+    }
+
+
+    /*
+    ==========================================
+    CLICAR FORA DO CARD
+    ==========================================
+    */
+
+    document.getElementById(
+        "paginaModelos"
+    ).addEventListener(
+        "click",
+        function(event) {
+
+            if (event.target === this) {
+
+                fecharModelos();
+
+            }
+
+        }
+    );
+
+
+    document.getElementById(
+        "paginaPreco"
+    ).addEventListener(
+        "click",
+        function(event) {
+
+            if (event.target === this) {
+
+                fecharPreco();
+
+            }
+
+        }
+    );
+
+</script>
+
+</body>
+</html>

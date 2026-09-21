@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="lg.css">
+
+    <title>JP-TEC - LG</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <section class="precos">
+
+        <h1>📱 Modelos LG</h1>
+
+        <p>Selecione o modelo do seu celular</p>
+
+        <div class="celulares">
+
+            <!-- LG K10 -->
+            <div class="celular-card"
+                onclick="abrirModelos('LG K10')">
+                <div class="icone">
+                    <img class="imagem" src="img/l10.webp" alt="LG K10">
+                </div>
+                <h2>LG K10</h2>
+                <span>Ver modelos</span>
+            </div>
+
+            <!-- LG K11 -->
+            <div class="celular-card"
+                onclick="abrirModelos('LG K11')">
+                <div class="icone">
+                    <img class="imagem"  src="img/lgk11.webp" alt="LG K11">
+                </div>
+                <h2>LG K11</h2>
+                <span>Ver modelos</span>
+            </div>
+
+            <!-- LG K12 -->
+            <div class="celular-card"
+                onclick="abrirModelos('LG K12')">
+                <div class="icone">
+                    <img class="imagem"  src="img/lgk12.webp" alt="LG K12">
+                </div>
+                <h2>LG K12</h2>
+                <span>Ver modelos</span>
+            </div>
+
+
+            <!-- LG K22 -->
+            <div class="celular-card"
+                onclick="abrirModelos('LG K22')">
+                <div class="imagem" class="icone">
+                    <img class="imagem" src="img/lgk22.webp" alt="LG K22">
+                </div>
+                <h2>LG K22</h2>
+                <span>Ver modelos</span>
+            </div>
+
+            <!-- LG K41S -->
+            <div class="celular-card"
+                onclick="abrirModelos('LG K41S')">
+                <div class="icone">
+                    <img src="img/lgk41s.webp" alt="LG K41S"class="imagem" >
+                </div>
+                <h2>LG K41S</h2>
+                <span>Ver modelos</span>
+            </div>
+
+        
+
+            <!-- LG K51S -->
+            <div class="celular-card"
+                onclick="abrirModelos('LG K51S')">
+                <div class="icone">
+                    <img src="img/lgk51.webp" class="imagem"  alt="LG K51S">
+                </div>
+                <h2>LG K51S</h2>
+                <span>Ver modelos</span>
+            </div>
+
+            <!-- LG K52 -->
+            <div class="celular-card"
+                onclick="abrirModelos('LG K52')">
+                <div class="icone">
+                    <img src="img/lgk52.webp"class="imagem"  alt="LG K52">
+                </div>
+                <h2>LG K52</h2>
+                <span>Ver modelos</span>
+            </div>
+
+            <!-- LG K61 -->
+            <div class="celular-card"
+                onclick="abrirModelos('LG K61')">
+                <div class="icone">
+                    <img src="img/lgk61.webp" class="imagem" alt="LG K61">
+                </div>
+                <h2>LG K61</h2>
+                <span>Ver modelos</span>
+            </div>
+
+            <!-- LG K62 -->
+            <div class="celular-card"
+                onclick="abrirModelos('LG K62')">
+                <div class="icone">
+                    <img src="img/lgk62.webp" class="imagem"  alt="LG K62">
+                </div>
+                <h2>LG K62</h2>
+                <span>Ver modelos</span>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- JANELA DOS MODELOS -->
+
+    <div class="pagina-preco" id="paginaModelos">
+
+        <div class="preco-card">
+
+            <button class="fechar" onclick="fecharModelos()">
+                ×
+            </button>
+
+            <div class="icone-grande">
+                📱
+            </div>
+
+            <h2 id="tituloModelo">
+                LG K10
+            </h2>
+
+            <p class="tipo-servico">
+                Escolha a versão
+            </p>
+
+            <div class="opcoes-modelos" id="opcoesModelos">
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- PÁGINA DO ORÇAMENTO -->
+
+<div class="pagina-preco" id="paginaPreco">
+
+    <div class="preco-card">
+
+        <button class="fechar" onclick="fecharPreco()">
+            ×
+        </button>
+
+        <div class="icone-grande">
+            📱
+        </div>
+
+        <h2 id="nomeCelular">
+            LG K10
+        </h2>
+
+        <p class="tipo-servico">
+            Descreva o problema do aparelho
+        </p>
+
+        <textarea
+            id="problemaCelular"
+            placeholder="Digite aqui o problema do seu celular..."
+            rows="5"
+        ></textarea>
+
+        <a
+            class="whatsapp"
+            id="botaoWhatsapp"
+            href="#"
+        >
+            💬 Solicitar orçamento
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<script>
+
+const modelos = {
+
+    "LG K10": [
+        "LG K10",
+        "LG K10 Power"
+    ],
+
+    "LG K11": [
+        "LG K11",
+        "LG K11+"
+    ],
+
+    "LG K12": [
+        "LG K12",
+        "LG K12+"
+    ],
+
+    "LG K12+": [
+        "LG K12+"
+    ],
+
+    "LG K22": [
+        "LG K22",
+        "LG K22+"
+    ],
+
+    "LG K40": [
+        "LG K40",
+        "LG K40S"
+    ],
+
+    "LG K41S": [
+        "LG K41S"
+    ],
+
+    "LG K50S": [
+        "LG K50S"
+    ],
+
+    "LG K51S": [
+        "LG K51S"
+    ],
+
+    "LG K52": [
+        "LG K52"
+    ],
+
+    "LG K61": [
+        "LG K61"
+    ],
+
+    "LG K62": [
+        "LG K62",
+        "LG K62+"
+    ],
+
+    "LG G6": [
+        "LG G6"
+    ],
+
+    "LG G7": [
+        "LG G7 ThinQ"
+    ],
+
+    "LG G8": [
+        "LG G8 ThinQ"
+    ],
+
+    "LG V30": [
+        "LG V30"
+    ],
+
+    "LG V40": [
+        "LG V40 ThinQ"
+    ],
+
+    "LG V50": [
+        "LG V50 ThinQ"
+    ],
+
+    "LG V60": [
+        "LG V60 ThinQ"
+    ],
+
+    "LG Wing": [
+        "LG Wing"
+    ]
+
+};
+function abrirModelos(modelo) {
+
+    document.getElementById("tituloModelo").textContent = modelo;
+
+    const container =
+        document.getElementById("opcoesModelos");
+
+    container.innerHTML = "";
+
+    modelos[modelo].forEach(function(nome) {
+
+        const botao =
+            document.createElement("button");
+
+        botao.className = "botao-modelo";
+
+        botao.innerHTML = `
+            <strong>${nome}</strong>
+            <span>Solicitar orçamento</span>
+        `;
+
+        botao.onclick = function() {
+            abrirPreco(nome);
+        };
+
+        container.appendChild(botao);
+
+    });
+
+    document
+        .getElementById("paginaModelos")
+        .classList.add("aberta");
+}
+
+
+function fecharModelos() {
+
+    document.getElementById(
+        "paginaModelos"
+    ).classList.remove("aberta");
+
+}
+
+function abrirPreco(nome) {
+
+    document.getElementById("nomeCelular").textContent = nome;
+
+    document.getElementById("problemaCelular").value = "";
+
+    const botaoWhatsapp =
+        document.getElementById("botaoWhatsapp");
+
+    botaoWhatsapp.onclick = function(event) {
+
+        event.preventDefault();
+
+        const problema =
+            document
+                .getElementById("problemaCelular")
+                .value
+                .trim();
+
+        if (problema === "") {
+
+            alert(
+                "Por favor, descreva o problema do celular."
+            );
+
+            return;
+        }
+
+        const numero =
+            "5577998384275";
+
+        const mensagem =
+            "Olá! Gostaria de solicitar um orçamento para o " +
+            nome +
+            ".\n\n" +
+            "Problema apresentado:\n" +
+            problema;
+
+        const link =
+            "https://wa.me/" +
+            numero +
+            "?text=" +
+            encodeURIComponent(mensagem);
+
+        window.open(link, "_blank");
+
+    };
+
+    fecharModelos();
+
+    document
+        .getElementById("paginaPreco")
+        .classList.add("aberta");
+}
+
+function fecharPreco() {
+
+    document.getElementById(
+        "paginaPreco"
+    ).classList.remove("aberta");
+
+}
+
+
+document.getElementById(
+    "paginaModelos"
+).addEventListener(
+    "click",
+    function(event) {
+
+        if (event.target === this) {
+            fecharModelos();
+        }
+
+    }
+);
+
+
+document.getElementById(
+    "paginaPreco"
+).addEventListener(
+    "click",
+    function(event) {
+
+        if (event.target === this) {
+            fecharPreco();
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>

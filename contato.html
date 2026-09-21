@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="sobre.css">
+    <title>Contato - JP-TEC</title>
+</head>
+
+<body>
+<header id="cabecalho">
+
+        <div id="introducao">
+            <img id="logo" src="img/jp.png" alt="Logo da JP-TEC">
+
+            <div>
+                <h2>JP-TEC</h2>
+                <span>Tecnologia & Manutenção</span>
+            </div>
+        </div>
+
+        <nav id="paginas">
+
+            <a class="links ativo" href="index.html">
+                <span>⌂</span>
+                Início
+            </a>
+
+            <a class="links" href="manutencao.html">
+                <span>🔧</span>
+                Manutenção
+            </a>
+
+            <a class="links" href="produtos.html">
+                <span>📱</span>
+                Produtos
+            </a>
+
+            <a class="links" href="contato.html">
+                <span>✉</span>
+                Contato
+            </a>
+
+            <a class="links" href="sobre.html">
+                <span>ⓘ</span>
+                Sobre nós
+            </a>
+
+        </nav>
+
+    </header>
+<div class="container">
+
+    <!-- ================================
+         CABEÇALHO
+    ================================= -->
+
+    <section class="cabecalho">
+
+        <h1>📞 Entre em Contato</h1>
+
+        <p>
+            Fale com a JP-TEC e solicite seu orçamento.
+        </p>
+
+    </section>
+
+
+    <!-- ================================
+         ÁREA DE CONTATO
+    ================================= -->
+
+    <section class="contato">
+
+        <div class="informacoes">
+
+            <!-- WHATSAPP -->
+
+            <div class="contato-card">
+
+                <div class="icone">
+                    📱
+                </div>
+
+                <div>
+
+                    <h2>WhatsApp</h2>
+
+                    <p>
+                        Fale conosco pelo WhatsApp
+                    </p>
+
+                    <a
+                        href="https://wa.me/5577998384275"
+                        target="_blank"
+                    >
+                        (77) 99838-4275
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ENDEREÇO -->
+
+            <div class="contato-card">
+
+                <div class="icone">
+                    📍
+                </div>
+
+                <div>
+
+                    <h2>Endereço</h2>
+
+                    <p>
+                        Visite nossa loja
+                    </p>
+
+                    <span>
+                        Rua Deolino de Carvalho, Nº 182A
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="contato-card">
+
+                <div class="icone">
+                    ✉️
+                </div>
+
+                <div>
+
+                    <h2>E-mail</h2>
+
+                    <p>
+                        Envie sua mensagem
+                    </p>
+
+                    <a href="mailto:jplimabarbosadasilva25@gmail.com">
+                        jplimabarbosadasilva25@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HORÁRIO -->
+
+            <div class="contato-card">
+
+                <div class="icone">
+                    🕐
+                </div>
+
+                <div>
+
+                    <h2>Horário</h2>
+
+                    <p>
+                        Segunda a sexta
+                    </p>
+
+                    <span>
+                        08:00 às 18:00
+                    </span>
+
+                    <small>
+                        Sábado: 08:00 às 13:00
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================
+             FORMULÁRIO
+        ================================= -->
+
+        <div class="formulario">
+
+            <h2>💬 Envie uma mensagem</h2>
+
+            <p>
+                Preencha os campos abaixo.
+            </p>
+
+
+            <form id="formContato">
+
+                <!-- NOME -->
+
+                <label for="nome">
+                    Nome
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+
+                <!-- TELEFONE -->
+
+                <label for="telefone">
+                    Telefone
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    placeholder="(77) 998384275"
+                    required
+                >
+
+
+                <!-- ASSUNTO -->
+
+                <label for="assunto">
+                    Assunto
+                </label>
+
+                <select id="assunto">
+
+                    <option value="Orçamento">
+                        Orçamento
+                    </option>
+
+                    <option value="Troca de vidro">
+                        Troca de vidro
+                    </option>
+
+                    <option value="Manutenção">
+                        Manutenção
+                    </option>
+
+                    <option value="Troca de tela">
+                        Troca de tela
+                    </option>
+
+                    <option value="Outro">
+                        Outro
+                    </option>
+
+                </select>
+
+
+                <!-- MENSAGEM -->
+
+                <label for="mensagem">
+                    Mensagem
+                </label>
+
+                <textarea
+                    id="mensagem"
+                    rows="5"
+                    placeholder="Digite sua mensagem..."
+                    required
+                ></textarea>
+
+
+                <!-- BOTÃO -->
+
+                <button type="submit">
+                    💬 Enviar pelo WhatsApp
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script>
+
+document
+    .getElementById("formContato")
+    .addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            /*
+            ==================================
+            PEGAR INFORMAÇÕES DO FORMULÁRIO
+            ==================================
+            */
+
+            const nome =
+                document.getElementById("nome").value;
+
+            const telefone =
+                document.getElementById("telefone").value;
+
+            const assunto =
+                document.getElementById("assunto").value;
+
+            const mensagem =
+                document.getElementById("mensagem").value;
+
+
+            /*
+            ==================================
+            NÚMERO DA JP-TEC
+            ==================================
+            */
+
+            const numero =
+                "5577998384275";
+
+
+            /*
+            ==================================
+            MENSAGEM
+            ==================================
+            */
+
+            const texto =
+
+                "Olá! Vim pelo site da JP-TEC." +
+
+                "\n\n" +
+
+                "👤 Nome: " +
+                nome +
+
+                "\n📱 Telefone: " +
+                telefone +
+
+                "\n📌 Assunto: " +
+                assunto +
+
+                "\n💬 Mensagem: " +
+                mensagem;
+
+
+            /*
+            ==================================
+            CRIAR LINK DO WHATSAPP
+            ==================================
+            */
+
+            const link =
+
+                "https://wa.me/" +
+                numero +
+                "?text=" +
+                encodeURIComponent(texto);
+
+
+            /*
+            ==================================
+            ABRIR WHATSAPP
+            ==================================
+            */
+
+            window.open(
+                link,
+                "_blank"
+            );
+
+        }
+    );
+
+</script>
+
+
+</body>
+</html>

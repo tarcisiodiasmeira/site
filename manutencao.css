@@ -1,0 +1,1441 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:
+        radial-gradient(circle at 80% 8%, #172554 0%, transparent 30%),
+        radial-gradient(circle at 15% 55%, rgba(37, 99, 235, 0.08) 0%, transparent 28%),
+        linear-gradient(135deg, #0f172a, #111827);
+
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+#cabecalho {
+    width: 92%;
+    max-width: 1400px;
+
+    margin: 20px auto;
+
+    padding: 12px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: rgba(15, 23, 42, 0.88);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(10px);
+}
+
+
+#introducao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+#logo {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 0 8px rgba(59, 130, 246, 0.5)
+        );
+
+    transition: 0.3s;
+}
+
+
+#logo:hover {
+    transform: scale(1.08);
+}
+
+
+#introducao h2 {
+    color: white;
+
+    font-size: 23px;
+
+    letter-spacing: 1px;
+}
+
+
+#introducao span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+#paginas {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+
+.links span {
+    font-size: 16px;
+}
+
+
+.links:hover {
+    color: white;
+
+    background:
+        rgba(59, 130, 246, 0.15);
+
+    transform: translateY(-2px);
+}
+
+
+.links.ativo {
+    color: white;
+
+    background: #2563eb;
+
+    box-shadow:
+        0 5px 18px
+        rgba(37, 99, 235, 0.3);
+}
+
+
+
+/* ========================================
+   HERO DA MANUTENÇÃO
+======================================== */
+
+#hero-manutencao {
+    width: 90%;
+    max-width: 1200px;
+
+    min-height: 420px;
+
+    margin: 25px auto 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 55px;
+}
+
+
+#hero-texto {
+    max-width: 700px;
+}
+
+
+.subtitulo {
+    color: #60a5fa;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+
+#hero-texto h1 {
+    color: white;
+
+    font-size:
+        clamp(40px, 5.0vw, 60px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+
+#hero-texto h1 strong {
+    display: block;
+
+    color: #3b82f6;
+}
+
+
+.descricao {
+    max-width: 650px;
+
+    color: #94a3b8;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.botao-solicitar {
+    display: block;
+    width: fit-content;
+    margin: 5px auto;
+    background: #2563eb;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 45px;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.botao-solicitar:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+/* ==========================================
+   SERVIÇOS PARA PC
+========================================== */
+
+#servicos-pc {
+    width: 100%;
+    padding: 90px 8%;
+ 
+    color: #111827;
+}
+
+#servicos-pc .titulo-secao {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#servicos-pc .titulo-secao p {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+#servicos-pc .titulo-secao h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+#servicos-pc .titulo-secao span {
+    display: block;
+    max-width: 650px;
+    margin: 0 auto;
+    color: #6b7280;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   GRID
+========================================== */
+
+#servicos-pc .servicos-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+#servicos-pc .servico-card {
+    min-width: 0;
+    padding: 30px;
+
+    background: #111827;
+    color: #ffffff;
+
+    border: 1px solid #1f2937;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+#servicos-pc .servico-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================
+   ÍCONE
+========================================== */
+
+#servicos-pc .servico-icone {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    background: #eaf2ff;
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+                 TEXTO
+========================================== */
+
+#servicos-pc .servico-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#servicos-pc .servico-card p {
+    color: #cbd5e1;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ========================================
+   INDICADORES
+======================================== */
+
+#indicadores {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.indicador {
+    padding: 9px 13px;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    background:
+        rgba(30, 41, 59, 0.5);
+
+    border:
+        1px solid
+        rgba(96, 165, 250, 0.15);
+
+    border-radius: 10px;
+}
+
+
+.indicador span {
+    color: #22c55e;
+
+    font-weight: bold;
+
+    margin-right: 5px;
+}
+
+
+/* ========================================
+   CARD LATERAL
+======================================== */
+
+#hero-card {
+    width: 290px;
+    min-width: 300px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(37, 99, 235, 0.2),
+            rgba(15, 23, 42, 0.8)
+        );
+
+    border:
+        1px solid
+        rgba(96, 165, 250, 0.2);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.35);
+
+    transition: 0.35s;
+}
+
+
+#hero-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(96, 165, 250, 0.5);
+}
+
+
+.icone-tecnologia {
+    font-size: 65px;
+
+    margin-bottom: 15px;
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            rgba(59, 130, 246, 0.5)
+        );
+}
+
+
+#hero-card h3 {
+    color: white;
+
+    font-size: 26px;
+
+    margin-bottom: 10px;
+}
+
+
+#hero-card p {
+    color: #94a3b8;
+
+    line-height: 1.6;
+}
+
+
+.linha {
+    width: 60px;
+    height: 2px;
+
+    margin: 20px auto;
+
+    background: #3b82f6;
+}
+
+
+.status {
+    color: #cbd5e1;
+
+    font-size: 13px;
+}
+
+
+.status span {
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    margin-right: 6px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px
+        rgba(34, 197, 94, 0.7);
+}
+
+
+/* ========================================
+   ÁREA DAS MARCAS
+======================================== */
+
+#marcas {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding-bottom: 70px;
+}
+
+
+.titulo-secao {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.titulo-secao p {
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+.titulo-secao h2 {
+    color: white;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+.titulo-secao > span {
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+
+/* ========================================
+   CARDS DAS MARCAS
+======================================== */
+
+#tipodocelular {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 20px;
+}
+
+
+.tipo {
+    min-height: 210px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30, 41, 59, 0.78),
+            rgba(15, 23, 42, 0.72)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.22);
+
+    overflow: hidden;
+
+    transition: 0.35s;
+}
+
+
+.tipo:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(59, 130, 246, 0.5);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(37, 99, 235, 0.2),
+            rgba(15, 23, 42, 0.85)
+        );
+
+    box-shadow:
+        0 18px 38px
+        rgba(0, 0, 0, 0.3);
+}
+
+
+.tipo a {
+    width: 100%;
+    min-height: 210px;
+
+    padding: 25px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: white;
+}
+
+
+/* ========================================
+   LOGO DA MARCA
+======================================== */
+
+.icone-marca {
+    width: 95px;
+    height: 95px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+
+.tipo:hover .icone-marca {
+    transform: scale(1.05);
+}
+
+
+.icone-marca img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: contain;
+}
+
+
+.tipo h3 {
+    color: white;
+
+    font-size: 19px;
+
+    margin-bottom: 5px;
+
+    transition: 0.3s;
+}
+
+
+.tipo:hover h3 {
+    color: #60a5fa;
+}
+
+
+.tipo > a > span {
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   PROCESSO
+======================================== */
+
+#processo {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding:
+        10px 0 80px;
+}
+
+
+.titulo-secao.pequeno {
+    margin-bottom: 28px;
+}
+
+
+.titulo-secao.pequeno h2 {
+    font-size: 27px;
+}
+
+
+#passos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.passo {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 25px;
+
+    background:
+        rgba(30, 41, 59, 0.5);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+
+.passo:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(59, 130, 246, 0.35);
+}
+
+
+.numero {
+    min-width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(37, 99, 235, 0.18);
+
+    border-radius: 12px;
+
+    color: #60a5fa;
+
+    font-weight: bold;
+
+    font-size: 13px;
+}
+
+
+.passo h3 {
+    color: white;
+
+    font-size: 17px;
+
+    margin-bottom: 7px;
+}
+
+
+.passo p {
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   TELAS GRANDES
+======================================== */
+
+/* ==========================================
+   COMPUTADOR GRANDE
+   ACIMA DE 1200PX
+========================================== */
+
+@media (min-width: 1201px) {
+
+    #servicos-pc {
+        padding: 100px 8%;
+    }
+
+    #servicos-pc .servicos-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+}/* ==========================================
+   NOTEBOOK
+   901PX ATÉ 1200PX
+========================================== */
+
+@media (min-width: 901px) and (max-width: 1200px) {
+
+    #servicos-pc {
+        padding: 80px 5%;
+    }
+
+    #servicos-pc .titulo-secao h2 {
+        font-size: 34px;
+    }
+
+    #servicos-pc .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    #servicos-pc .servico-card {
+        padding: 28px;
+    }
+
+}/* ==========================================
+   TABLET
+   601PX ATÉ 900PX
+========================================== */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    #servicos-pc {
+        padding: 70px 5%;
+    }
+
+    #servicos-pc .titulo-secao h2 {
+        font-size: 32px;
+    }
+
+    #servicos-pc .titulo-secao span {
+        font-size: 15px;
+    }
+
+    #servicos-pc .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 40px;
+    }
+
+    #servicos-pc .servico-card {
+        padding: 24px;
+    }
+
+    #servicos-pc .servico-card h3 {
+        font-size: 18px;
+    }
+
+    #servicos-pc .servico-card p {
+        font-size: 14px;
+    }
+
+}
+@media (min-width: 1600px) {
+
+    #cabecalho {
+        padding: 15px 30px;
+    }
+
+
+    #logo {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    #introducao h2 {
+        font-size: 27px;
+    }
+
+
+    .links {
+        font-size: 18px;
+
+        padding: 12px 15px;
+    }
+
+
+    #hero-manutencao {
+        max-width: 1400px;
+
+        min-height: 500px;
+    }
+
+
+    #marcas,
+    #processo {
+        max-width: 1400px;
+    }
+
+
+    #tipodocelular {
+        gap: 25px;
+    }
+
+
+    .tipo,
+    .tipo a {
+        min-height: 225px;
+    }
+
+}
+
+
+/* ========================================
+   NOTEBOOK
+======================================== */
+
+@media (min-width: 801px) and (max-width: 999px) {
+
+    #cabecalho {
+        width: 95%;
+    }
+
+
+    #paginas {
+        gap: 2px;
+    }
+
+
+    .links {
+        font-size: 14px;
+
+        padding: 8px 7px;
+    }
+
+
+    #hero-manutencao {
+        width: 94%;
+
+        gap: 30px;
+    }
+
+
+    #hero-card {
+        width: 270px;
+
+        min-width: 270px;
+
+        padding: 25px;
+    }
+
+
+    #tipodocelular {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 601px) and (max-width: 800px) {
+
+    #cabecalho {
+        width: 94%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+
+    #introducao {
+        justify-content: center;
+    }
+
+
+    #paginas {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 8px;
+    }
+
+
+    .links {
+        justify-content: center;
+
+        font-size: 15px;
+
+        text-align: center;
+    }
+
+
+    #hero-manutencao {
+        width: 90%;
+
+        min-height: auto;
+
+        margin-top: 35px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 35px;
+    }
+
+
+    #hero-texto {
+        max-width: 650px;
+    }
+
+
+    .descricao {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    #indicadores {
+        justify-content: center;
+    }
+
+
+    #hero-card {
+        width: 300px;
+    }
+
+
+    #marcas,
+    #processo {
+        width: 90%;
+    }
+
+
+    #tipodocelular {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    #passos {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+
+    #cabecalho {
+        width: 94%;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 12px;
+    }
+
+
+    #introducao {
+        justify-content: center;
+    }
+
+
+    #logo {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    #introducao h2 {
+        font-size: 20px;
+    }
+
+
+    #introducao span {
+        font-size: 9px;
+    }
+
+
+    #paginas {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 6px;
+    }
+
+
+    .links {
+        justify-content: center;
+
+        font-size: 13px;
+
+        text-align: center;
+
+        white-space: normal;
+
+        padding: 8px 3px;
+    }
+
+
+    #hero-manutencao {
+        width: 90%;
+
+        min-height: auto;
+
+        margin-top: 30px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+
+    #hero-texto h1 {
+        font-size: 37px;
+    }
+
+
+    .subtitulo {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .descricao {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+
+    #indicadores {
+        flex-direction: column;
+    }
+
+
+    .indicador {
+        width: 100%;
+    }
+
+
+    #hero-card {
+        width: 100%;
+
+        min-width: 0;
+
+        max-width: 290px;
+
+        padding: 25px;
+    }
+
+
+    #marcas,
+    #processo {
+        width: 90%;
+    }
+
+
+    .titulo-secao {
+        margin-bottom: 28px;
+    }
+
+
+    .titulo-secao h2 {
+        font-size: 26px;
+    }
+
+
+    .titulo-secao > span {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    #tipodocelular {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .tipo,
+    .tipo a {
+        min-height: 155px;
+    }
+
+
+    .tipo a {
+        padding: 15px 8px;
+    }
+
+
+    .icone-marca {
+        width: 68px;
+        height: 68px;
+
+        border-radius: 16px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .icone-marca img {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .tipo h3 {
+        font-size: 16px;
+    }
+
+
+    .tipo > a > span {
+        font-size: 10px;
+    }
+
+
+    #processo {
+        padding-bottom: 55px;
+    }
+
+
+    .titulo-secao.pequeno h2 {
+        font-size: 23px;
+    }
+
+
+    #passos {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .passo {
+        padding: 18px;
+    }
+
+}
+
+
+/* ========================================
+   CELULAR MUITO PEQUENO
+======================================== */
+
+@media (max-width: 350px) {
+
+    #cabecalho {
+        padding: 10px;
+    }
+
+
+    #logo {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    #introducao h2 {
+        font-size: 18px;
+    }
+
+
+    #introducao span {
+        font-size: 8px;
+    }
+
+
+    .links {
+        font-size: 12px;
+
+        padding: 7px 2px;
+    }
+
+
+    #hero-manutencao {
+        width: 92%;
+    }
+
+
+    #hero-texto h1 {
+        font-size: 32px;
+    }
+
+
+    .subtitulo {
+        font-size: 9px;
+    }
+
+
+    .descricao {
+        font-size: 14px;
+    }
+
+
+    #hero-card {
+        max-width: 260px;
+    }
+
+
+    .titulo-secao h2 {
+        font-size: 23px;
+    }
+
+
+    #tipodocelular {
+        gap: 8px;
+    }
+
+
+    .tipo,
+    .tipo a {
+        min-height: 140px;
+    }
+
+
+    .icone-marca {
+        width: 58px;
+        height: 58px;
+    }
+
+
+    .icone-marca img {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .tipo h3 {
+        font-size: 14px;
+    }
+
+
+    .tipo > a > span {
+        font-size: 9px;
+    }
+
+
+    .passo {
+        padding: 15px;
+    }
+
+
+    .numero {
+        min-width: 36px;
+
+        height: 36px;
+
+        font-size: 11px;
+    }
+
+
+    .passo h3 {
+        font-size: 15px;
+    }
+
+
+    .passo p {
+        font-size: 12px;
+    }
+
+}

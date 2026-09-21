@@ -1,0 +1,1147 @@
+/* =========================================
+   CONFIGURAÇÃO GERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+}
+
+
+/* =========================================
+   PRIMEIRA SEÇÃO - SOBRE
+========================================= */
+
+
+#cabecalho {
+    width: 92%;
+    max-width: 1400px;
+
+    margin: 20px auto;
+
+    padding: 12px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: rgba(15, 23, 42, 0.88);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(10px);
+}
+
+
+#introducao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+#logo {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 0 8px rgba(59, 130, 246, 0.5)
+        );
+
+    transition: 0.3s;
+}
+
+
+#logo:hover {
+    transform: scale(1.08);
+}
+
+
+#introducao h2 {
+    color: white;
+
+    font-size: 23px;
+
+    letter-spacing: 1px;
+}
+
+
+#introducao span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+.links {
+    display: flex;
+
+    align-items: center;
+    
+    gap: 6px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+#paginas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#sobre-nos {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 80px 8%;
+
+    background: #111827;
+}
+
+
+/* =========================================
+   FOTO DO DONO
+========================================= */
+
+.sobre-fundo {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 55%;
+    height: 100%;
+
+    background-image: url("img/dono 1.png");
+
+    /*
+       CONTAIN faz a imagem aparecer inteira.
+       Não corta a cabeça.
+    */
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: center right;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   DEGRADÊ SOBRE A FOTO
+========================================= */
+
+.sobre-fundo::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #111827 0%,
+            rgba(17, 24, 39, 0.85) 15%,
+            rgba(17, 24, 39, 0.25) 60%,
+            rgba(17, 24, 39, 0.05) 100%
+        );
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.sobre-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    width: 55%;
+
+    max-width: 700px;
+
+    padding: 35px;
+
+    text-align: left;
+}
+
+
+/* =========================================
+   PEQUENO TÍTULO
+========================================= */
+
+.subtitulo {
+    display: inline-block;
+
+    color: #25D366;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   TÍTULO PRINCIPAL
+========================================= */
+
+.sobre-conteudo h1 {
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+
+    color: white;
+}
+
+
+/* =========================================
+   SUBTÍTULO
+========================================= */
+
+.sobre-conteudo h2 {
+    font-size: 23px;
+
+    line-height: 1.4;
+
+    font-weight: normal;
+
+    color: #d1d5db;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+.sobre-conteudo p {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #d1d5db;
+
+    margin-bottom: 15px;
+
+    max-width: 650px;
+}
+
+
+/* =========================================
+   BOTÃO WHATSAPP
+========================================= */
+
+.btn-sobre {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 15px 28px;
+
+    background: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 25px rgba(37, 211, 102, 0.25);
+}
+
+.btn-sobre:hover {
+    background: #1ebe5d;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(37, 211, 102, 0.35);
+}
+
+
+/* =========================================
+   TÍTULOS DAS OUTRAS SEÇÕES
+========================================= */
+
+.titulo-secao {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+}
+
+.titulo-secao span {
+    color: #25D366;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.titulo-secao h2 {
+    font-size: 36px;
+
+    margin-top: 10px;
+
+    margin-bottom: 12px;
+}
+
+.titulo-secao p {
+    color: #9ca3af;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   VALORES
+========================================= */
+
+.valores {
+    padding: 90px 7%;
+
+    background: #111827;
+}
+
+
+.cards-valores {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.valor-card {
+    background: white;
+
+    color: #222;
+
+    padding: 30px 22px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+.valor-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+.valor-icone {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #31572c;
+
+    font-size: 30px;
+}
+
+
+.valor-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+
+.valor-card p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   SERVIÇOS
+========================================= */
+
+.servicos {
+    padding: 90px 7%;
+
+    background: #0d1420;
+}
+
+
+.lista-servicos {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.servico {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 22px;
+
+    background: #172033;
+
+    border: 1px solid #26334a;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+
+.servico:hover {
+    transform: translateY(-5px);
+
+    border-color: #25D366;
+
+    background: #1b263b;
+}
+
+
+.servico span {
+    font-size: 30px;
+}
+.servico p {
+    color: #eee;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CHAMADA FINAL
+========================================= */
+
+.chamada {
+    padding: 90px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #31572c,
+            #1f3b25
+        );
+}
+
+
+.chamada span {
+    color: #b9f5bd;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.chamada h2 {
+    font-size: 40px;
+
+    margin: 15px 0;
+}
+
+
+.chamada p {
+    color: #ddd;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+}
+
+
+.chamada a {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+
+.chamada a:hover {
+    background: #1ebe5d;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    #sobre-nos {
+        padding: 60px 5%;
+    }
+
+    .sobre-conteudo {
+        width: 60%;
+    }
+
+    .sobre-fundo {
+        width: 55%;
+    }
+
+    .sobre-conteudo h1 {
+        font-size: 45px;
+    }
+
+    .cards-valores {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .lista-servicos {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+/* =========================================
+   RESPONSIVIDADE - TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    #cabecalho {
+        width: 94%;
+        padding: 12px 16px;
+    }
+
+    #paginas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #sobre-nos {
+        padding: 70px 5%;
+    }
+
+    .sobre-conteudo {
+        width: 58%;
+        padding: 25px;
+    }
+
+    .sobre-conteudo h1 {
+        font-size: 48px;
+    }
+
+    .sobre-fundo {
+        width: 55%;
+    }
+
+    .cards-valores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lista-servicos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   TABLET PEQUENO
+========================================= */
+
+@media (max-width: 800px) {
+
+    #cabecalho {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #introducao {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #paginas {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .links {
+        justify-content: center;
+        font-size: 14px;
+    }
+
+
+    /* SOBRE */
+
+    #sobre-nos {
+        min-height: auto;
+
+        padding: 60px 30px 450px;
+
+        display: block;
+    }
+
+    .sobre-conteudo {
+        width: 100%;
+        max-width: 700px;
+
+        margin: auto;
+
+        padding: 20px;
+
+        text-align: center;
+    }
+
+    .sobre-conteudo h1 {
+        font-size: 44px;
+    }
+
+    .sobre-conteudo h2 {
+        font-size: 20px;
+    }
+
+    .sobre-conteudo p {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* FOTO */
+
+    .sobre-fundo {
+        top: auto;
+        bottom: 0;
+
+        left: 0;
+        right: 0;
+
+        width: 100%;
+        height: 450px;
+
+        background-size: contain;
+        background-position: center bottom;
+    }
+
+
+    /* VALORES */
+
+    .valores {
+        padding: 70px 30px;
+    }
+
+    .cards-valores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* SERVIÇOS */
+
+    .servicos {
+        padding: 70px 30px;
+    }
+
+    .lista-servicos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* CHAMADA */
+
+    .chamada {
+        padding: 70px 30px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* =====================================
+       CABEÇALHO
+    ===================================== */
+
+    #cabecalho {
+        width: 94%;
+
+        margin: 12px auto;
+
+        padding: 12px;
+
+        border-radius: 15px;
+
+        flex-direction: column;
+    }
+
+    #introducao {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    #logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    #introducao h2 {
+        font-size: 20px;
+    }
+
+    #introducao span {
+        font-size: 10px;
+    }
+
+
+    /* =====================================
+       MENU
+    ===================================== */
+
+    #paginas {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 5px;
+    }
+
+    .links {
+        width: 100%;
+
+        padding: 9px 5px;
+
+        font-size: 13px;
+
+        text-align: center;
+
+        justify-content: center;
+    }
+
+
+    /* =====================================
+       SOBRE
+    ===================================== */
+
+    #sobre-nos {
+
+        min-height: auto;
+
+        padding:
+            45px 15px 400px;
+
+        display: block;
+    }
+
+
+    .sobre-conteudo {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 10px;
+
+        text-align: center;
+    }
+
+
+    .subtitulo {
+
+        font-size: 12px;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .sobre-conteudo h1 {
+
+        font-size: clamp(32px, 9vw, 40px);
+
+        line-height: 1.1;
+
+        margin-bottom: 15px;
+    }
+
+
+    .sobre-conteudo h2 {
+
+        font-size: 18px;
+
+        line-height: 1.4;
+
+        margin-bottom: 20px;
+    }
+
+
+    .sobre-conteudo p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* =====================================
+       FOTO
+    ===================================== */
+
+    .sobre-fundo {
+
+        top: auto;
+
+        bottom: 0;
+
+        left: 0;
+
+        right: 0;
+
+        width: 100%;
+
+        height: 400px;
+
+        background-size: contain;
+
+        background-position: center bottom;
+    }
+
+
+    .sobre-fundo::after {
+
+        background:
+            linear-gradient(
+                180deg,
+                #111827 0%,
+                rgba(17, 24, 39, 0.45) 30%,
+                rgba(17, 24, 39, 0.10) 70%,
+                rgba(17, 24, 39, 0) 100%
+            );
+    }
+
+
+    /* =====================================
+       BOTÃO
+    ===================================== */
+
+    .btn-sobre {
+
+        width: 100%;
+
+        padding: 14px 20px;
+
+        font-size: 15px;
+
+        margin-top: 15px;
+    }
+
+
+    /* =====================================
+       TÍTULOS
+    ===================================== */
+
+    .titulo-secao {
+
+        margin-bottom: 35px;
+    }
+
+    .titulo-secao span {
+
+        font-size: 11px;
+    }
+
+    .titulo-secao h2 {
+
+        font-size: 27px;
+
+        line-height: 1.2;
+    }
+
+    .titulo-secao p {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    /* =====================================
+       VALORES
+    ===================================== */
+
+    .valores {
+
+        padding: 60px 15px;
+    }
+
+    .cards-valores {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .valor-card {
+
+        padding: 25px 18px;
+
+        border-radius: 16px;
+    }
+
+    .valor-icone {
+
+        width: 58px;
+        height: 58px;
+
+        font-size: 26px;
+    }
+
+
+    /* =====================================
+       SERVIÇOS
+    ===================================== */
+
+    .servicos {
+
+        padding: 60px 15px;
+    }
+
+    .lista-servicos {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .servico {
+
+        padding: 18px;
+
+        gap: 12px;
+    }
+
+    .servico span {
+
+        font-size: 26px;
+    }
+
+    .servico p {
+
+        font-size: 14px;
+    }
+
+
+    /* =====================================
+       CHAMADA FINAL
+    ===================================== */
+
+    .chamada {
+
+        padding: 60px 15px;
+    }
+
+    .chamada span {
+
+        font-size: 11px;
+    }
+
+    .chamada h2 {
+
+        font-size: 28px;
+
+        line-height: 1.2;
+    }
+
+    .chamada p {
+
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .chamada a {
+
+        width: 100%;
+
+        padding: 14px 20px;
+
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================
+   CELULARES MUITO PEQUENOS
+========================================= */
+
+@media (max-width: 380px) {
+
+    #cabecalho {
+        width: 96%;
+    }
+
+    #introducao h2 {
+        font-size: 18px;
+    }
+
+    #introducao span {
+        font-size: 9px;
+    }
+
+    #paginas {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .links {
+        font-size: 12px;
+        padding: 8px 3px;
+    }
+
+    #sobre-nos {
+        padding-bottom: 350px;
+    }
+
+    .sobre-fundo {
+        height: 350px;
+    }
+
+    .sobre-conteudo h1 {
+        font-size: 31px;
+    }
+
+    .sobre-conteudo h2 {
+        font-size: 17px;
+    }
+
+    .sobre-conteudo p {
+        font-size: 13px;
+    }
+}

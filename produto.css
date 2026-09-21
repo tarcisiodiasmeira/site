@@ -1,0 +1,1353 @@
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   BODY
+================================================== */
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: aliceblue;
+
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            #172554 0%,
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #111827
+        );
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+#cabecalho {
+
+    width: 92%;
+
+    max-width: 1400px;
+
+    margin: 20px auto;
+
+    padding: 12px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        rgba(15, 23, 42, 0.88);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+/* ==================================================
+   INTRODUÇÃO
+================================================== */
+
+#introducao {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+#logo {
+
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(59, 130, 246, 0.5)
+        );
+
+    transition: 0.3s;
+}
+
+
+#logo:hover {
+
+    transform: scale(1.08);
+}
+
+
+#introducao h2 {
+
+    color: white;
+
+    font-size: 23px;
+
+    letter-spacing: 1px;
+}
+
+
+#introducao span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   MENU
+================================================== */
+
+#paginas {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+
+.links span {
+
+    font-size: 16px;
+}
+
+
+.links:hover {
+
+    color: white;
+
+    background:
+        rgba(59, 130, 246, 0.15);
+
+    transform:
+        translateY(-2px);
+}
+
+
+.links.ativo {
+
+    color: white;
+
+    background:
+        #2563eb;
+
+    box-shadow:
+        0 5px 18px
+        rgba(37, 99, 235, 0.3);
+}
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
+#titulo {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 90px auto 45px;
+
+    text-align: center;
+}
+
+
+#titulo p {
+
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+#titulo h1 {
+
+    font-size:
+        clamp(42px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+
+#titulo h1 strong {
+
+    color: #3b82f6;
+}
+
+
+#titulo span {
+
+    display: block;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #94a3b8;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   CATEGORIAS
+================================================== */
+
+#categorias {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.categoria {
+
+    padding: 11px 18px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid #334155;
+
+    background:
+        rgba(255, 255, 255, 0.03);
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.categoria:hover {
+
+    color: white;
+
+    border-color:
+        #3b82f6;
+
+    background:
+        rgba(59, 130, 246, 0.12);
+
+    transform:
+        translateY(-2px);
+}
+
+
+.categoria.ativo {
+
+    color: white;
+
+    background:
+        #2563eb;
+
+    border-color:
+        #2563eb;
+
+    box-shadow:
+        0 7px 20px
+        rgba(37, 99, 235, 0.25);
+}
+
+
+/* ==================================================
+   PRODUTOS
+================================================== */
+
+#produtos {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 80px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* ==================================================
+   CARD PRODUTO
+================================================== */
+
+.produto {
+
+    min-height: 390px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        rgba(30, 41, 59, 0.55);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        background 0.3s,
+        box-shadow 0.3s;
+}
+
+
+.produto:hover {
+
+    transform:
+        translateY(-8px);
+
+    background:
+        rgba(30, 41, 59, 0.85);
+
+    border-color:
+        rgba(59, 130, 246, 0.5);
+
+    box-shadow:
+        0 20px 40px
+        rgba(0, 0, 0, 0.3);
+}
+
+
+/* ==================================================
+   IMAGEM
+================================================== */
+
+.produto-imagem {
+
+    height: 210px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37, 99, 235, 0.18),
+            transparent 65%
+        ),
+
+        linear-gradient(
+            145deg,
+            #172554,
+            #0f172a
+        );
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.05);
+}
+
+
+.produto-imagem::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+
+    height: 130px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(59, 130, 246, 0.15);
+
+    filter: blur(10px);
+}
+
+
+.produto-imagem span {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 80px;
+
+    filter:
+        drop-shadow(
+            0 8px 15px
+            rgba(0, 0, 0, 0.4)
+        );
+
+    transition: 0.3s;
+}
+
+
+.produto:hover
+.produto-imagem span {
+
+    transform:
+        scale(1.12)
+        rotate(-3deg);
+}
+
+
+/* ==================================================
+   CONTEÚDO DO PRODUTO
+================================================== */
+
+.produto-conteudo {
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+.produto-conteudo small {
+
+    color: #60a5fa;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.produto-conteudo h2 {
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+
+.produto-conteudo p {
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+.produto-conteudo a {
+
+    margin-top: auto;
+
+    color: #60a5fa;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.produto-conteudo a:hover {
+
+    color: white;
+
+    transform:
+        translateX(5px);
+}
+
+
+/* ==================================================
+   CHAMADA FINAL
+================================================== */
+
+#chamada {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 80px;
+
+    padding: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.18),
+            rgba(15, 23, 42, 0.8)
+        );
+
+    border:
+        1px solid
+        rgba(96, 165, 250, 0.15);
+}
+
+
+#chamada p {
+
+    color: #60a5fa;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+#chamada h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+
+#chamada h2 strong {
+
+    color: #3b82f6;
+}
+
+
+#chamada span {
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+.botao {
+
+    display: inline-block;
+
+    padding: 14px 22px;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 8px 25px
+        rgba(37, 99, 235, 0.3);
+
+    transition: 0.3s;
+}
+
+
+.botao:hover {
+
+    background: #3b82f6;
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+    padding: 25px;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   TV / MONITOR GRANDE
+================================================== */
+
+@media (min-width: 1600px) {
+
+    #cabecalho {
+
+        padding: 15px 30px;
+    }
+
+
+    #logo {
+
+        width: 60px;
+
+        height: 60px;
+    }
+
+
+    #introducao h2 {
+
+        font-size: 27px;
+    }
+
+
+    .links {
+
+        font-size: 18px;
+
+        padding: 12px 15px;
+    }
+
+
+    #produtos {
+
+        max-width: 1400px;
+
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+
+    .produto-imagem {
+
+        height: 230px;
+    }
+
+}
+
+
+/* ==================================================
+   PC / NOTEBOOK
+================================================== */
+
+@media (min-width: 1000px)
+and (max-width: 1599px) {
+
+    #cabecalho {
+
+        width: 94%;
+    }
+
+
+    #produtos {
+
+        width: 92%;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* ==================================================
+   NOTEBOOK PEQUENO
+================================================== */
+
+@media (min-width: 801px)
+and (max-width: 999px) {
+
+    #cabecalho {
+
+        width: 95%;
+    }
+
+
+    #paginas {
+
+        gap: 2px;
+    }
+
+
+    .links {
+
+        font-size: 14px;
+
+        padding: 8px 7px;
+    }
+
+
+    #produtos {
+
+        width: 94%;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 18px;
+    }
+
+
+    #chamada {
+
+        width: 94%;
+    }
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (min-width: 601px)
+and (max-width: 800px) {
+
+    #cabecalho {
+
+        width: 94%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+
+    #introducao {
+
+        justify-content: center;
+    }
+
+
+    #paginas {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 8px;
+    }
+
+
+    .links {
+
+        justify-content: center;
+
+        font-size: 15px;
+
+        padding: 10px 5px;
+
+        text-align: center;
+    }
+
+
+    #titulo {
+
+        margin-top: 60px;
+    }
+
+
+    #produtos {
+
+        width: 90%;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 16px;
+    }
+
+
+    .produto {
+
+        min-height: 370px;
+    }
+
+
+    .produto-imagem {
+
+        height: 190px;
+    }
+
+
+    #chamada {
+
+        width: 90%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 35px 25px;
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR GRANDE
+================================================== */
+
+@media (min-width: 451px)
+and (max-width: 600px) {
+
+    #cabecalho {
+
+        width: 94%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+
+    #introducao {
+
+        justify-content: center;
+
+        margin-left: 0;
+    }
+
+
+    #paginas {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 8px;
+    }
+
+
+    .links {
+
+        justify-content: center;
+
+        font-size: 14px;
+
+        padding: 9px 4px;
+
+        white-space: normal;
+
+        text-align: center;
+    }
+
+
+    #titulo {
+
+        width: 90%;
+
+        margin-top: 50px;
+    }
+
+
+    #titulo h1 {
+
+        font-size: 43px;
+    }
+
+
+    #titulo span {
+
+        font-size: 15px;
+    }
+
+
+    #categorias {
+
+        width: 94%;
+    }
+
+
+    .categoria {
+
+        font-size: 13px;
+
+        padding: 9px 13px;
+    }
+
+
+    #produtos {
+
+        width: 90%;
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .produto {
+
+        min-height: 360px;
+    }
+
+
+    #chamada {
+
+        width: 90%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px 20px;
+    }
+
+
+    #chamada h2 {
+
+        font-size: 27px;
+    }
+
+
+    .botao {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR FINO
+================================================== */
+
+@media (max-width: 450px) {
+
+    #cabecalho {
+
+        width: 94%;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 12px;
+    }
+
+
+    #introducao {
+
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+
+    #logo {
+
+        width: 45px;
+
+        height: 45px;
+    }
+
+
+    #introducao h2 {
+
+        font-size: 20px;
+    }
+
+
+    #introducao span {
+
+        font-size: 9px;
+    }
+
+
+    #paginas {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 6px;
+    }
+
+
+    .links {
+
+        justify-content: center;
+
+        font-size: 13px;
+
+        padding: 8px 3px;
+
+        white-space: normal;
+
+        text-align: center;
+    }
+
+
+    #titulo {
+
+        width: 90%;
+
+        margin-top: 45px;
+
+        margin-bottom: 35px;
+    }
+
+
+    #titulo p {
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+
+    #titulo h1 {
+
+        font-size: 37px;
+    }
+
+
+    #titulo span {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    #categorias {
+
+        width: 94%;
+
+        gap: 6px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .categoria {
+
+        font-size: 12px;
+
+        padding: 8px 10px;
+    }
+
+
+    #produtos {
+
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .produto {
+
+        min-height: 350px;
+
+        border-radius: 17px;
+    }
+
+
+    .produto-imagem {
+
+        height: 180px;
+    }
+
+
+    .produto-imagem span {
+
+        font-size: 70px;
+    }
+
+
+    .produto-conteudo {
+
+        padding: 22px;
+    }
+
+
+    .produto-conteudo h2 {
+
+        font-size: 20px;
+    }
+
+
+    .produto-conteudo p {
+
+        font-size: 13px;
+    }
+
+
+    #chamada {
+
+        width: 90%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px 18px;
+
+        margin-bottom: 60px;
+    }
+
+
+    #chamada h2 {
+
+        font-size: 25px;
+    }
+
+
+    #chamada span {
+
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    .botao {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR MUITO FINO
+================================================== */
+
+@media (max-width: 350px) {
+
+    #cabecalho {
+
+        padding: 10px;
+    }
+
+
+    #logo {
+
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    #introducao h2 {
+
+        font-size: 18px;
+    }
+
+
+    #introducao span {
+
+        font-size: 8px;
+    }
+
+
+    .links {
+
+        font-size: 12px;
+
+        padding: 7px 2px;
+    }
+
+
+    #titulo h1 {
+
+        font-size: 32px;
+    }
+
+
+    #titulo span {
+
+        font-size: 13px;
+    }
+
+
+    .categoria {
+
+        font-size: 11px;
+
+        padding: 7px 8px;
+    }
+
+
+    .produto-imagem {
+
+        height: 160px;
+    }
+
+
+    .produto-imagem span {
+
+        font-size: 60px;
+    }
+
+
+    .produto-conteudo {
+
+        padding: 19px;
+    }
+
+
+    .produto-conteudo h2 {
+
+        font-size: 18px;
+    }
+
+
+    #chamada h2 {
+
+        font-size: 22px;
+    }
+
+}
+

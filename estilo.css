@@ -1,0 +1,1554 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:
+        radial-gradient(circle at 80% 10%, #172554 0%, transparent 30%),
+        linear-gradient(135deg, #0f172a, #111827);
+
+    color: aliceblue;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+}
+
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+#cabecalho {
+    width: 92%;
+    max-width: 1400px;
+
+    margin: 20px auto;
+
+    padding: 12px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(15, 23, 42, 0.88);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* ================================
+   INTRODUÇÃO
+================================ */
+
+#introducao {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+#logo {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+
+    transition: 0.3s;
+}
+
+
+#logo:hover {
+    transform: scale(1.08);
+}
+
+
+#introducao h2 {
+    font-size: 23px;
+
+    letter-spacing: 1px;
+
+    color: white;
+}
+
+
+#introducao span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================================
+   MENU
+================================ */
+
+#paginas {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+
+.links span {
+    font-size: 16px;
+}
+
+
+.links:hover {
+    color: white;
+
+    background: rgba(59, 130, 246, 0.15);
+
+    transform: translateY(-2px);
+}
+
+
+.links.ativo {
+    color: white;
+
+    background: #2563eb;
+
+    box-shadow:
+        0 5px 18px rgba(37, 99, 235, 0.3);
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+#hero {
+    width: 90%;
+    max-width: 1200px;
+
+    min-height: 500px;
+
+    margin: 20px auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+
+/* ================================
+   TEXTO HERO
+================================ */
+
+#hero-texto {
+    max-width: 650px;
+}
+
+
+.subtitulo {
+    color: #60a5fa;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+#hero h1 {
+    font-size: clamp(40px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+#hero h1 strong {
+    display: block;
+
+    color: #3b82f6;
+}
+
+
+.descricao {
+    max-width: 580px;
+
+    color: #94a3b8;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   BOTÕES
+================================ */
+
+#botoes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.botao {
+    display: inline-block;
+
+    padding: 14px 22px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.botao.principal {
+    color: white;
+
+    background: #2563eb;
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+
+.botao.principal:hover {
+    background: #3b82f6;
+
+    transform: translateY(-3px);
+}
+
+
+.botao.secundario {
+    color: #cbd5e1;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    border: 1px solid #334155;
+}
+
+
+.botao.secundario:hover {
+    color: white;
+
+    border-color: #3b82f6;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================================
+   CARD PRINCIPAL
+================================ */
+
+#hero-card {
+    width: 300px;
+
+    min-width: 300px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(37, 99, 235, 0.2),
+            rgba(15, 23, 42, 0.8)
+        );
+
+    border: 1px solid rgba(96, 165, 250, 0.2);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+
+    transition: 0.4s;
+}
+
+
+#hero-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(96, 165, 250, 0.5);
+}
+
+
+.icone-tecnologia {
+    font-size: 65px;
+
+    margin-bottom: 15px;
+
+    filter:
+        drop-shadow(
+            0 0 15px rgba(59, 130, 246, 0.5)
+        );
+}
+
+
+#hero-card h3 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+#hero-card p {
+    color: #94a3b8;
+
+    line-height: 1.6;
+}
+
+
+.linha {
+    width: 60px;
+
+    height: 2px;
+
+    background: #3b82f6;
+
+    margin: 20px auto;
+}
+
+
+.status {
+    color: #cbd5e1;
+
+    font-size: 13px;
+}
+
+
+.status span {
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    margin-right: 6px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+}
+
+
+/* ================================
+   SERVIÇOS
+================================ */
+
+#servicos {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding-bottom: 80px;
+}
+
+
+.titulo-secao {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.titulo-secao p {
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+.titulo-secao h2 {
+    font-size: 32px;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+#cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.card {
+    padding: 30px;
+
+    border-radius: 18px;
+
+    background: rgba(30, 41, 59, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(30, 41, 59, 0.8);
+
+    border-color:
+        rgba(59, 130, 246, 0.5);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-icone {
+    font-size: 35px;
+
+    margin-bottom: 18px;
+}
+
+
+.card h3 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+
+.card p {
+    color: #94a3b8;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+.card a {
+    color: #60a5fa;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.card a:hover {
+    color: white;
+}
+/* ==================================================
+   PRODUTOS + PERSONAGEM
+================================================== */
+
+#produtos-personagem {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 100px auto 80px;
+
+    padding: 70px 40px;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(37, 99, 235, 0.18),
+            transparent 40%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(30, 41, 59, 0.75),
+            rgba(15, 23, 42, 0.9)
+        );
+
+    border: 1px solid rgba(96, 165, 250, 0.12);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* ================================
+   TÍTULO
+================================ */
+
+.produtos-header {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+}
+
+
+.produtos-header p {
+
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+.produtos-header h2 {
+
+    font-size: clamp(30px, 5vw, 50px);
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+}
+
+
+.produtos-header h2 strong {
+
+    display: block;
+
+    color: #3b82f6;
+}
+
+
+.produtos-header span {
+
+    color: #94a3b8;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   LAYOUT
+================================ */
+
+.produtos-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+/* ================================
+   LISTA
+================================ */
+
+.produtos-lista {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.produto-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    background: rgba(15, 23, 42, 0.7);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    transition: 0.3s;
+}
+
+
+.produto-item:hover {
+
+    transform: translateX(8px);
+
+    border-color:
+        rgba(59, 130, 246, 0.5);
+
+    background:
+        rgba(30, 41, 59, 0.9);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.produto-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    min-width: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    font-size: 30px;
+
+    background:
+        rgba(37, 99, 235, 0.15);
+
+    border:
+        1px solid rgba(96, 165, 250, 0.15);
+}
+
+
+.produto-info h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 6px;
+}
+
+
+.produto-info p {
+
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 8px;
+}
+
+
+.produto-info a {
+
+    color: #60a5fa;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.produto-info a:hover {
+
+    color: white;
+}
+
+
+/* ==================================================
+   PERSONAGEM
+================================================== */
+
+#personagem-container {
+
+    height: 600px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    perspective: 1000px;
+
+    overflow: visible;
+}
+
+
+/* LUZ ATRÁS DO PERSONAGEM */
+
+.personagem-glow {
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37, 99, 235, 0.35),
+            transparent 65%
+        );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+}
+
+
+/* PERSONAGEM */
+
+#personagem {
+
+    width: 80%;
+    
+    max-width: 480px;
+
+    position: relative;
+
+    z-index: 2;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.12s ease-out;
+
+    will-change: transform;
+}
+
+/* ========================================
+   MOVIMENTO DO PERSONAGEM
+======================================== */
+
+#personagem {
+    animation: personagemMovimento 3s ease-in-out infinite;
+}
+
+@keyframes personagemMovimento {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(-1deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+}
+#personagem img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 20px 35px rgba(0, 0, 0, 0.5)
+        );
+
+    user-select: none;
+
+    pointer-events: none;
+}
+
+
+
+/* ================================
+   STATUS
+================================ */
+
+.personagem-status {
+
+    position: absolute;
+
+    bottom: 15px;
+
+    z-index: 5;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(15, 23, 42, 0.9);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.personagem-status span {
+
+    display: inline-block;
+
+    width: 8px;
+
+    height: 8px;
+
+    margin-right: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 10px #22c55e;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 800px) {
+
+    #produtos-personagem {
+
+        width: 94%;
+
+        padding: 50px 25px;
+
+    }
+
+
+    .produtos-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+
+    #personagem-container {
+
+        height: 500px;
+
+        order: -1;
+
+    }
+
+
+    #personagem {
+
+        max-width: 400px;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 600px) {
+
+    #produtos-personagem {
+
+        width: 94%;
+
+        padding: 45px 18px;
+
+        border-radius: 24px;
+
+    }
+
+
+    .produtos-header {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .produtos-header h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .produtos-header span {
+
+        font-size: 14px;
+
+    }
+
+
+    #personagem-container {
+
+        height: 430px;
+
+    }
+
+
+    #personagem {
+
+        max-width: 330px;
+
+    }
+
+
+    .personagem-glow {
+
+        width: 280px;
+
+        height: 280px;
+
+    }
+
+
+    .produto-item {
+
+        padding: 17px;
+
+    }
+
+
+    .produto-icon {
+
+        width: 50px;
+
+        height: 50px;
+
+        min-width: 50px;
+
+        font-size: 25px;
+
+    }
+
+
+    .produto-info h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .produto-info p {
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR FINO
+================================================== */
+
+@media (max-width: 350px) {
+
+    #personagem-container {
+
+        height: 370px;
+
+    }
+
+
+    #personagem {
+
+        max-width: 290px;
+
+    }
+
+
+    .produtos-header h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .produto-item {
+
+        gap: 12px;
+
+    }
+
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 20px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   TV / MONITOR GRANDE
+================================================== */
+
+@media (min-width: 1600px) {
+
+    #cabecalho {
+        padding: 15px 30px;
+    }
+
+    #logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    #introducao h2 {
+        font-size: 27px;
+    }
+
+    .links {
+        font-size: 18px;
+
+        padding: 12px 15px;
+    }
+
+    #hero {
+        max-width: 1400px;
+
+        min-height: 600px;
+    }
+}
+
+
+/* ==================================================
+   PC / NOTEBOOK
+   1000px até 1599px
+================================================== */
+
+@media (min-width: 1000px) and (max-width: 1599px) {
+
+    #cabecalho {
+        width: 94%;
+    }
+
+    #hero {
+        width: 92%;
+
+        gap: 40px;
+    }
+
+    .links {
+        font-size: 15px;
+    }
+}
+
+
+/* ==================================================
+   NOTEBOOK PEQUENO / TABLET GRANDE
+   801px até 999px
+================================================== */
+
+@media (min-width: 801px) and (max-width: 999px) {
+
+    #cabecalho {
+        width: 95%;
+    }
+
+    #paginas {
+        gap: 2px;
+    }
+
+    .links {
+        font-size: 14px;
+
+        padding: 8px 7px;
+    }
+
+    #hero {
+        width: 94%;
+
+        gap: 25px;
+    }
+
+    #hero-card {
+        width: 270px;
+
+        min-width: 270px;
+
+        padding: 25px;
+    }
+
+    #cards {
+        gap: 15px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}
+
+
+/* ==================================================
+   TABLET
+   601px até 800px
+================================================== */
+
+@media (min-width: 601px) and (max-width: 800px) {
+
+    #cabecalho {
+        width: 94%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    #introducao {
+        justify-content: center;
+
+        margin-left: 0;
+    }
+
+    #paginas {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 8px;
+    }
+
+    .links {
+        justify-content: center;
+
+        font-size: 15px;
+
+        padding: 10px 5px;
+
+        text-align: center;
+    }
+
+    #hero {
+        width: 90%;
+
+        margin-top: 40px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    #hero-texto {
+        max-width: 650px;
+    }
+
+    .descricao {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #botoes {
+        justify-content: center;
+    }
+
+    #hero-card {
+        width: 300px;
+    }
+
+    #cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* ==================================================
+   CELULAR GRANDE
+   451px até 600px
+================================================== */
+
+@media (min-width: 451px) and (max-width: 600px) {
+
+    #cabecalho {
+        width: 94%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    #introducao {
+        justify-content: center;
+
+        margin-left: 0;
+    }
+
+    #paginas {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 8px;
+    }
+
+    .links {
+        justify-content: center;
+
+        font-size: 14px;
+
+        text-align: center;
+
+        white-space: normal;
+
+        padding: 9px 4px;
+    }
+
+    #hero {
+        width: 90%;
+
+        margin-top: 40px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    #hero h1 {
+        font-size: 43px;
+    }
+
+    .descricao {
+        font-size: 16px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #botoes {
+        justify-content: center;
+    }
+
+    .botao {
+        padding: 12px 15px;
+    }
+
+    #hero-card {
+        width: 280px;
+
+        min-width: 280px;
+
+        padding: 28px;
+    }
+
+    #cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==================================================
+   CELULAR FINO
+   até 450px
+================================================== */
+
+@media (max-width: 450px) {
+
+    #cabecalho {
+        width: 94%;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 12px;
+    }
+
+    #introducao {
+        justify-content: center;
+
+        margin-left: 0;
+
+        gap: 10px;
+    }
+
+    #logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    #introducao h2 {
+        font-size: 20px;
+    }
+
+    #introducao span {
+        font-size: 9px;
+    }
+
+    #paginas {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 6px;
+    }
+
+    .links {
+        justify-content: center;
+
+        font-size: 13px;
+
+        text-align: center;
+
+        white-space: normal;
+
+        padding: 8px 3px;
+    }
+
+    #hero {
+        width: 90%;
+
+        margin-top: 35px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 35px;
+    }
+
+    #hero h1 {
+        font-size: 37px;
+    }
+
+    .subtitulo {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .descricao {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    #botoes {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .botao {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    #hero-card {
+        width: 100%;
+
+        min-width: 0;
+
+        max-width: 290px;
+
+        padding: 25px;
+    }
+
+    #servicos {
+        width: 90%;
+    }
+
+    .titulo-secao h2 {
+        font-size: 26px;
+    }
+
+    #cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 25px;
+    }
+}
+
+
+/* ==================================================
+   CELULAR MUITO FINO
+   até 350px
+================================================== */
+
+@media (max-width: 350px) {
+
+    #cabecalho {
+        padding: 10px;
+    }
+
+    #logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    #introducao h2 {
+        font-size: 18px;
+    }
+
+    #introducao span {
+        font-size: 8px;
+    }
+
+    .links {
+        font-size: 12px;
+
+        padding: 7px 2px;
+    }
+
+    #hero {
+        width: 92%;
+    }
+
+    #hero h1 {
+        font-size: 32px;
+    }
+
+    .subtitulo {
+        font-size: 9px;
+    }
+
+    .descricao {
+        font-size: 14px;
+    }
+
+    #hero-card {
+        max-width: 260px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 23px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}

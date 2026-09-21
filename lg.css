@@ -1,0 +1,925 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    color: #f8fafc;
+
+    background:
+        radial-gradient(
+            circle at 80% 5%,
+            #172554 0%,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 15% 55%,
+            rgba(37, 99, 235, 0.08) 0%,
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #111827
+        );
+}
+
+
+/* =================================
+   CONTAINER
+================================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =================================
+   SEÇÃO PRINCIPAL
+================================= */
+
+.precos {
+    width: 92%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 70px 0 90px;
+
+    text-align: center;
+}
+
+
+/* =================================
+   TÍTULO
+================================= */
+
+.precos > h1 {
+    color: #ffffff;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.1;
+
+    margin-bottom: 12px;
+
+    letter-spacing: -1px;
+}
+
+.precos > p {
+    color: #94a3b8;
+
+    font-size: 16px;
+
+    margin-bottom: 50px;
+}
+
+
+/* =================================
+   CATEGORIA
+================================= */
+
+.categoria {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto 70px;
+}
+
+.categoria > h2 {
+    color: #ffffff;
+
+    font-size: 30px;
+
+    margin-bottom: 28px;
+
+    padding-bottom: 14px;
+
+    text-align: left;
+
+    border-bottom:
+        2px solid
+        rgba(59, 130, 246, 0.45);
+}
+
+
+/* =================================
+   GRID
+================================= */
+
+.celulares {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 20px;
+
+    justify-content: center;
+}
+
+
+/* =================================
+   CARD
+================================= */
+
+.celular-card {
+    width: 100%;
+    min-height: 280px;
+    
+    padding: 20px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8fafc,
+            #e2e8f0
+        );
+
+    border:
+        1px solid
+        #cbd5e1;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+#problemaCelular{
+    margin: 10px;
+    width: 240px;
+    height: 30px;
+}
+/* =================================
+   IMAGEM DO CELULAR
+================================= */
+
+.imagem{
+    width: 100px;
+}
+
+.celular-card .icone {
+    width: 125px;
+    height: 150px;
+
+    padding: 8px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 8px 22px
+        rgba(0, 0, 0, 0.22);
+
+    overflow: hidden;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* =================================
+   HOVER CARD
+================================= */
+
+.celular-card:hover {
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(59, 130, 246, 0.55);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(37, 99, 235, 0.20),
+            rgba(15, 23, 42, 0.88)
+        );
+
+    box-shadow:
+        0 20px 45px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+.celular-card:hover .icone {
+    transform:
+        scale(1.06);
+
+    box-shadow:
+        0 12px 30px
+        rgba(37, 99, 235, 0.20);
+}
+
+
+/* =================================
+   TEXTO
+================================= */
+
+.celular-card h2 {
+    color: #172554;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+
+    transition:
+        color 0.3s ease;
+}
+
+.celular-card:hover h2 {
+    color: #60a5fa;
+}
+
+
+.celular-card span {
+    color: #64748b;
+
+    font-size: 13px;
+
+    font-weight: normal;
+
+    transition:
+        color 0.3s ease;
+}
+
+.celular-card:hover span {
+    color: #60a5fa;
+}
+
+
+/* =================================
+   JANELA
+================================= */
+
+.pagina-preco {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        rgba(2, 6, 23, 0.78);
+
+    backdrop-filter:
+        blur(8px);
+}
+
+
+.pagina-preco.aberta {
+    display: flex;
+}
+
+
+/* =================================
+   CARD DA JANELA
+================================= */
+
+.preco-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 450px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30, 41, 59, 0.98),
+            rgba(15, 23, 42, 0.98)
+        );
+
+    border:
+        1px solid
+        rgba(96, 165, 250, 0.20);
+
+    border-radius: 26px;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.55);
+
+    animation:
+        abrir 0.3s ease;
+}
+
+
+@keyframes abrir {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.88)
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+/* =================================
+   BOTÃO FECHAR
+================================= */
+
+.fechar {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    color: #cbd5e1;
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.fechar:hover {
+    background:
+        rgba(239, 68, 68, 0.18);
+
+    color: #ffffff;
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =================================
+   ÍCONE DA JANELA
+================================= */
+
+.icone-grande {
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(37, 99, 235, 0.15);
+
+    border:
+        1px solid
+        rgba(96, 165, 250, 0.15);
+
+    font-size: 42px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(37, 99, 235, 0.15);
+}
+
+
+/* =================================
+   TÍTULO DA JANELA
+================================= */
+
+.preco-card h2 {
+    color: #ffffff;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+
+.tipo-servico {
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   LISTA DE MODELOS
+================================= */
+
+.opcoes-modelos {
+    width: 100%;
+
+    margin-top: 15px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 15px;
+
+    background:
+        rgba(15, 23, 42, 0.65);
+}
+
+
+/* =================================
+   BOTÃO DOS MODELOS
+================================= */
+
+.botao-modelo {
+    width: 100%;
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px 18px;
+
+    border: none;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    background:
+        rgba(30, 41, 59, 0.65);
+
+    color: #ffffff;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.botao-modelo:last-child {
+    border-bottom: none;
+}
+
+
+.botao-modelo:hover {
+    background:
+        rgba(37, 99, 235, 0.18);
+
+    transform:
+        translateX(4px);
+}
+
+
+.botao-modelo strong {
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+
+.botao-modelo span {
+    color: #60a5fa;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* =================================
+   PREÇO
+================================= */
+
+.preco {
+    color: #60a5fa;
+
+    font-size: 43px;
+
+    font-weight: bold;
+
+    margin:
+        15px 0 28px;
+
+    text-shadow:
+        0 0 20px
+        rgba(59, 130, 246, 0.18);
+}
+
+
+/* =================================
+   WHATSAPP
+================================= */
+
+.whatsapp {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    padding: 15px;
+
+    background:
+        #16a34a;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 14px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px
+        rgba(22, 163, 74, 0.20);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.whatsapp:hover {
+    background:
+        #22c55e;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(22, 163, 74, 0.30);
+}
+
+
+/* =================================
+   SCROLL
+================================= */
+
+.preco-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.preco-card::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.preco-card::-webkit-scrollbar-thumb {
+    background:
+        rgba(96, 165, 250, 0.35);
+
+    border-radius: 10px;
+}
+
+
+/* =================================
+   TV / MONITOR GRANDE
+================================= */
+
+@media (min-width: 1600px) {
+
+    .precos {
+        max-width: 1500px;
+
+        padding-top: 80px;
+    }
+
+    .celulares {
+        gap: 25px;
+    }
+
+    .celular-card {
+        min-height: 300px;
+    }
+
+    .celular-card .icone {
+        width: 135px;
+        height: 160px;
+    }
+
+    .celular-card h2 {
+        font-size: 20px;
+    }
+}
+
+
+/* =================================
+   PC / NOTEBOOK
+================================= */
+
+@media (min-width: 1000px) and (max-width: 1599px) {
+
+    .celulares {
+        grid-template-columns:
+            repeat(4, 190px);
+    }
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (min-width: 651px) and (max-width: 999px) {
+
+    .precos {
+        width: 94%;
+
+        padding:
+            55px 0 70px;
+    }
+
+    .celulares {
+        grid-template-columns:
+            repeat(3, 190px);
+
+        gap: 16px;
+    }
+
+    .celular-card {
+        min-height: 260px;
+    }
+
+    .celular-card .icone {
+        width: 110px;
+        height: 140px;
+    }
+}
+
+
+/* =================================
+   CELULAR
+================================= */
+
+@media (max-width: 650px) {
+
+    .precos {
+        width: 94%;
+
+        padding:
+            45px 0 60px;
+    }
+
+    .precos > h1 {
+        font-size: 30px;
+    }
+
+    .precos > p {
+        font-size: 14px;
+
+        margin-bottom: 35px;
+    }
+
+    .categoria {
+        margin-bottom: 50px;
+    }
+
+    .categoria > h2 {
+        font-size: 24px;
+
+        text-align: center;
+
+        margin-bottom: 20px;
+    }
+
+    .celulares {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .celular-card {
+        width: 100%;
+
+        min-height: 230px;
+
+        padding:
+            15px 8px;
+
+        border-radius: 18px;
+    }
+
+    .celular-card .icone {
+        width: 85px;
+        height: 120px;
+
+        margin-bottom: 12px;
+
+        border-radius: 18px;
+    }
+
+    .celular-card h2 {
+        font-size: 15px;
+    }
+
+    .celular-card span {
+        font-size: 11px;
+    }
+
+
+    /* JANELA */
+
+    .pagina-preco {
+        padding: 15px;
+    }
+
+    .preco-card {
+        max-width: 100%;
+
+        padding:
+            35px 18px 25px;
+
+        border-radius: 22px;
+    }
+
+    .icone-grande {
+        width: 70px;
+        height: 70px;
+
+        font-size: 34px;
+
+        border-radius: 18px;
+    }
+
+    .preco-card h2 {
+        font-size: 23px;
+    }
+
+    .tipo-servico {
+        font-size: 13px;
+    }
+
+    .botao-modelo {
+        padding:
+            14px 12px;
+    }
+
+    .botao-modelo strong {
+        font-size: 13px;
+    }
+
+    .botao-modelo span {
+        font-size: 12px;
+    }
+
+    .preco {
+        font-size: 35px;
+    }
+}
+
+
+/* =================================
+   CELULAR FINO
+================================= */
+
+@media (max-width: 350px) {
+
+    .precos {
+        width: 92%;
+    }
+
+    .precos > h1 {
+        font-size: 26px;
+    }
+
+    .precos > p {
+        font-size: 13px;
+    }
+
+    .celulares {
+        gap: 8px;
+    }
+
+    .celular-card {
+        min-height: 205px;
+    }
+
+    .celular-card .icone {
+        width: 72px;
+        height: 105px;
+    }
+
+    .celular-card h2 {
+        font-size: 13px;
+    }
+
+    .celular-card span {
+        font-size: 9px;
+    }
+
+    .preco-card {
+        padding:
+            32px 14px 20px;
+    }
+
+    .preco-card h2 {
+        font-size: 21px;
+    }
+
+    .preco {
+        font-size: 31px;
+    }
+}
